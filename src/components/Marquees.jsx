@@ -1,10 +1,31 @@
 import React from "react";
-import { useAppContext } from "./Context";
+
 import Marquee from "react-fast-marquee";
 import { Container } from "react-bootstrap";
 
 function Marquees() {
-  const { products } = useAppContext();
+  const products = [
+    {
+      name: "Interior Design",
+
+      image: "/images/interior.jpg",
+    },
+    {
+      name: "Exterior Design",
+
+      image: "/images/exterior.jpg",
+    },
+    {
+      name: "Home Renovation",
+
+      image: "/images/furniture.jpg",
+    },
+    {
+      name: "Home Renovation",
+
+      image: "/images/furniture.jpg",
+    },
+  ];
   return (
     <div>
       <Container id="Project">

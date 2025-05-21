@@ -4,28 +4,6 @@ import React, { createContext, useContext } from "react";
 const AppContext = createContext();
 // Create a Provider component
 export const AppProvider = ({ children }) => {
-  const products = [
-    {
-      name: "Interior Design",
-
-      image: "/images/interior.jpg",
-    },
-    {
-      name: "Exterior Design",
-
-      image: "/images/exterior.jpg",
-    },
-    {
-      name: "Home Renovation",
-
-      image: "/images/furniture.jpg",
-    },
-    {
-      name: "Home Renovation",
-
-      image: "/images/furniture.jpg",
-    },
-  ];
   const CompanyDetail = {
     companyName: "Miguel Orfao",
     companyStreet: "32 Hibernia street",
@@ -38,9 +16,7 @@ export const AppProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={{ CompanyDetail, products }}>
-      {children}
-    </AppContext.Provider>
+    <AppContext.Provider value={CompanyDetail}>{children}</AppContext.Provider>
   );
 };
 export const useAppContext = () => {
