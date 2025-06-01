@@ -99,7 +99,7 @@ function ContactForm() {
             {" "}
             <div className="text-white">
               <br />
-              <Nav className="text-center ">
+              <div className="text-center">
                 <Row className=" m-auto ">
                   <Col md={{ span: 6 }} className="text-center w-100">
                     <p className="text-muted">
@@ -123,22 +123,9 @@ function ContactForm() {
                         {companyNumber}
                       </Nav.Link>
                     </p>
-                    <p className="text-white">
-                      Address:{" "}
-                      <Nav.Link
-                        href={`https://www.google.com/maps/place/${companyStreet},+${companyCity},+${companyState},+${companyPostcode},+${companyCountry}`}
-                        className="text-white border-bottom"
-                      >
-                        <p>{companyStreet}</p>
-                        <p>{companyCity}</p>
-                        <p>{companyState}</p>
-                        <p> {companyPostcode}</p>
-                        <p>{companyCountry}</p>
-                      </Nav.Link>{" "}
-                    </p>
                   </Col>
                 </Row>{" "}
-              </Nav>
+              </div>
             </div>
           </Col>
         </Row>

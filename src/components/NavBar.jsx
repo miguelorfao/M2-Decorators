@@ -7,15 +7,12 @@ function NavigationBar() {
   return (
     <div>
       {" "}
-      <Navbar bg="light" expand="lg" className="position-fixed top-0 w-100 ">
+      <Navbar bg="light" expand="lg" className="nav">
         <Container>
           <Navbar.Brand href="#home">{companyName}</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href={`tel:${companyNumber}`} className="text-dark">
-                {companyNumber}
-              </Nav.Link>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#services">Services</Nav.Link>
               <Nav.Link href="#about">About Us</Nav.Link>

@@ -5,7 +5,7 @@ import { useAppContext } from "./Context";
 function About() {
   const { companyName } = useAppContext();
   return (
-    <div className="bg-light">
+    <div className="bg-dark">
       <Container id="about" className="my-5 py-2">
         <Row className="align-items-center">
           <Col md={6}>
