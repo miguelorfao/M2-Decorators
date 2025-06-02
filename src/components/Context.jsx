@@ -1,3 +1,4 @@
+import { logDOM } from "@testing-library/dom";
 import React, { createContext, useContext } from "react";
 
 // Create a Context for the app
@@ -7,7 +8,7 @@ export const AppProvider = ({ children }) => {
   const CompanyDetail = {
     companyName: "M2 Decorators",
 
-    companyNumber: "+1234567890",
+    companyNumber: "075 2359 9307",
     companyEmail: "Orfao.miguel@gmail.com",
   };
 

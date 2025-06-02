@@ -8,22 +8,22 @@ function About() {
     <div className="bg-dark">
       <Container id="about" className="my-5 py-2">
         <Row className="align-items-center">
-          <Col md={6}>
+          <Col md={6} className="py-4">
             <Image fluid src="/images/interior.jpg" className="rounded-4" />
           </Col>
           <Col md={6} className="text-center text-md-start">
             <h2>About company</h2>
             <p>
               At {companyName}, we believe that every space has the potential to
-              inspire. With over years of experience in transformation homes and
-              business, we specialize in bespoke interior and exterior
-              decoration tailored to our clients taste.
+              inspire. We are a passionate team driven by creativity, vision,
+              and exterior design.
             </p>
             <p>
-              From cozy indoor settings to stunning outdoor retreats, our
-              mission is to bring style, comfort, and functionality together in
-              perfect harmony, we work with our clients to understand their
-              vision and bring them to life precision and creativity.
+              Whether it's a cozy living room transformation or inviting outdoor
+              retreat, our mission is to bring style, comfort, and functionality
+              together in perfect balance. We collaborate closely with each
+              client to understand their vision and bring it to life with
+              precision and care.
             </p>
             <ul>
               <li>Personalized Design Consultations</li>

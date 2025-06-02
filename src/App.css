@@ -12,9 +12,17 @@ body {
   color: var(--text-color);
   background-color: var(--primary-color);
 }
+
+.logo {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--primary-accent-color) !important;
+}
 .nav {
   background-color: rgba(26, 26, 26, 0.9) !important;
-  position: sticky !important;
+  position: fixed !important;
+  width: 100%;
   top: 0 !important;
   z-index: 1000 !important;
 }
@@ -43,9 +51,11 @@ body {
 .nav a:hover::after {
   width: 100% !important;
 }
-
+.nav button {
+  background-color: var(--primary-accent-color) !important;
+}
 .hero-section {
-  background: url(../public/images/logo.jpg) center center / cover no-repeat;
+  background: url(../public/images/hero.jpg) center center / cover no-repeat;
   /* Full height */
   height: 100vh;
 }
@@ -63,6 +73,12 @@ body {
   color: var(--primary-accent-color) !important;
   border: 1px solid var(--primary-accent-color) !important;
 }
+.hero h1 {
+  font-family: "Playfair Display", serif !important;
+  color: var(--primary-accent-color) !important;
+  font-size: 3.5rem !important;
+  margin-bottom: 20px;
+}
 .hero-section {
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5 green, blue, alpha);
@@ -71,7 +87,4 @@ body {
 .services {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-}
-nav {
-  z-index: 9999;
 }

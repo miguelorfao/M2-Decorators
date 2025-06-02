@@ -1,16 +1,23 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useAppContext } from "./Context";
-
+// import { useAppContext } from "./Context";
+// Adjust the path as necessary
 function NavigationBar() {
-  const { companyName, companyNumber } = useAppContext();
+  // const { logo } = useAppContext();
   return (
     <div>
       {" "}
       <Navbar bg="light" expand="lg" className="nav">
         <Container>
-          <Navbar.Brand href="#home">{companyName}</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="#home">
+            <div className="logo">
+              M <sup>2</sup> Decorators
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="nav-button"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home">Home</Nav.Link>

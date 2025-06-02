@@ -33,7 +33,7 @@ function Marquees() {
         <h2 className="text-center my-5">Project</h2>
         <Marquee>
           {products.map((p, i) => (
-            <div key={i} className="mx-5 text-center">
+            <div key={i} className="mx-5 text-center py-4">
               <img
                 src={p.image}
                 alt={p.name}

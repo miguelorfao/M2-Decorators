@@ -16,9 +16,9 @@ function Services() {
       icon: "/images/exterior.jpg",
     },
     {
-      title: "Furniture Selection",
+      title: "General Maintenance",
       description:
-        "Choose the perfect furniture pieces to complement your style and space.",
+        "Keeping your space in peak condition with our comprehensive maintenance services.",
       icon: "/images/furniture.jpg",
     },
   ];

@@ -10,8 +10,8 @@ function Hero() {
       className="hero bg-dark text-white text-center d-flex align-items-center justify-content-center hero-section"
     >
       <Container>
-        <h1 className="display-4 fw-bold">Transform your space with style</h1>
-        <p className="lead">Elevate Your Space with M2 Decorators</p>
+        <h1>Elevate Your Space with M2 Decorators</h1>
+
         <Button
           variant="light"
           size="lg"
