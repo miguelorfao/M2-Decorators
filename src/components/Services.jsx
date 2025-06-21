@@ -48,6 +48,22 @@ function Services() {
           </Col>
         ))}
       </Row>
+      <Card className="bg-dark text-white text-center my-3 py-3 w-75 mx-auto">
+        <h2>Our Commitment to you</h2>
+        <hr />
+        <div className="p-3">
+          {" "}
+          <p>
+            We're proud to offer wide range of maintenance services - from basic
+            plumbing to basic electrical and general repairs.
+          </p>
+          <p>
+            But we also know that no one can do everything,. If a job fall
+            outside our scope, we'll connect you with a trusted professional who
+            can get it done.
+          </p>
+        </div>
+      </Card>
     </Container>
   );
 }
