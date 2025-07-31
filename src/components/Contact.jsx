@@ -20,6 +20,7 @@ function ContactForm() {
         () => {
           setStatus("Success");
           // Reset the form after successful submission
+          e.target.reset();
           console.log("SUCCESS!");
         },
         (error) => {
