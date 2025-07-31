@@ -88,3 +88,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
 }
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+  width: 300px;
+}

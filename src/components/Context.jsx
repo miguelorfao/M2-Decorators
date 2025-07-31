@@ -8,8 +8,8 @@ export const AppProvider = ({ children }) => {
   const CompanyDetail = {
     companyName: "M2 Decorators",
 
-    companyNumber: "075 2359 9307",
-    companyEmail: "Orfao.miguel@gmail.com",
+    companyNumber: "07523 599307",
+    companyEmail: "m2decorators25@gmail.com",
   };
 
   return (

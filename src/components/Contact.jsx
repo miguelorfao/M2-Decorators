@@ -1,136 +1,157 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Nav } from "react-bootstrap";
+import React, { useState, useRef, useEffect } from "react";
+import { Container, Row, Col, Form, Button, Nav, Alert } from "react-bootstrap";
 import { useAppContext } from "./Context"; // Assuming you have a context to get the email
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
-  const {
-    companyEmail,
-    companyNumber,
-    companyStreet,
-    companyCity,
-    companyState,
-    companyPostcode,
-    companyCountry,
-  } = useAppContext(); // Assuming you have a context to get the email
+  const { companyEmail, companyNumber } = useAppContext(); // Assuming you have a context to get the email
   // Assuming you have a context to get the name
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [status, setStatus] = useState("");
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here (e.g., API call)
+
+    emailjs
+      .sendForm("service_122801s", "template_9uj9c3d", form.current, {
+        publicKey: "1fj69a28zmyJcXbb1",
+      })
+      .then(
+        () => {
+          setStatus("Success");
+          // Reset the form after successful submission
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setStatus("Error");
+        }
+      );
   };
 
+  useEffect(() => {
+    // Reset status after 5 seconds
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus("");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
   return (
-    <div className="bg-dark py-3">
-      <Container id="contact" className="my-5 py-2">
-        <h2 className="text-center mb-4 text-white">Get in Touch</h2>
-        <Row className="align-items-center">
-          <Col md={{ span: 6 }} className="text-center">
-            <Form
-              onSubmit={handleSubmit}
-              className="p-4 shadow rounded bg-white"
-            >
-              <Form.Group className="mb-3" controlId="formName">
-                <div className="d-flex align-items-center">
+    <>
+      {" "}
+      <div className="bg-dark py-3">
+        <Container id="contact" className="my-5 py-2">
+          {status && (
+            <Alert variant="success">
+              {status === "Success"
+                ? "Message sent successfully"
+                : "Failed to send, please try again later"}
+            </Alert>
+          )}
+
+          <h2 className="text-center mb-4 text-white">Get in Touch</h2>
+          <Row className="align-items-center">
+            <Col md={{ span: 6 }} className="text-center">
+              <Form ref={form} onSubmit={sendEmail}>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label>Name</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Your Name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    placeholder="First Name"
                     required
                   />
-                </div>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formEmail">
-                <div className="d-flex align-items-center">
+                </Form.Group>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Your Email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    name="user_email"
+                    placeholder="Email address"
                     required
                   />
-                </div>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formSubject">
-                <div className="d-flex align-items-center">
+                </Form.Group>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label>Subject</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    placeholder="Subject"
                     required
                   />
-                </div>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formMessage">
-                <div className="d-flex align-items-start">
+                </Form.Group>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label>Message</Form.Label>
                   <Form.Control
                     as="textarea"
-                    rows={4}
-                    placeholder="Your Message"
+                    rows={3}
+                    type="text"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    placeholder="Message"
                     required
                   />
-                </div>
-              </Form.Group>
-              <Button variant="dark" type="submit" className="w-100">
-                Send Message
-              </Button>
-            </Form>
-          </Col>
-          <Col md={{ order: 2, span: 6 }} className="text-center">
-            {" "}
-            <div className="text-white">
-              <br />
-              <div className="text-center">
-                <Row className=" m-auto ">
-                  <Col md={{ span: 6 }} className="text-center w-100">
-                    <p className="text-muted">
+                </Form.Group>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="w-100"
+                  value="send"
+                >
+                  Send Message
+                </Button>
+              </Form>
+            </Col>
+            <Col md={{ order: 2, span: 6 }} className="text-center">
+              {" "}
+              <div className="text-white">
+                <br />
+                <div className="text-center">
+                  <Row className=" m-auto ">
+                    <Col md={{ span: 6 }} className="text-center w-100">
+                      <p className="text-muted">
+                        <p className="text-white">
+                          {" "}
+                          Email:
+                          <Nav.Link
+                            href={`mailto:${companyEmail}`}
+                            className="text-white border-bottom"
+                          >
+                            {companyEmail}
+                          </Nav.Link>
+                        </p>{" "}
+                      </p>
                       <p className="text-white">
-                        {" "}
-                        Email:
+                        Phone:{" "}
                         <Nav.Link
-                          href={`mailto:${companyEmail}`}
+                          href={`tel:${companyNumber}`}
                           className="text-white border-bottom"
                         >
-                          {companyEmail}
+                          {companyNumber}
                         </Nav.Link>
-                      </p>{" "}
-                    </p>
-                    <p className="text-white">
-                      Phone:{" "}
-                      <Nav.Link
-                        href={`tel:${companyNumber}`}
-                        className="text-white border-bottom"
-                      >
-                        {companyNumber}
-                      </Nav.Link>
-                    </p>
-                  </Col>
-                </Row>{" "}
+                      </p>
+                    </Col>
+                  </Row>{" "}
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
   );
 }
 

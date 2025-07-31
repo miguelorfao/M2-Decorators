@@ -8,18 +8,21 @@ function Services() {
       description:
         "Transform your indoor spaces with our expert interior design services.",
       icon: "/images/interior.jpg",
+      list: "- Interior Design\n- Furniture Assembly\n- Painting and Decorating",
     },
     {
       title: "Exterior Design",
       description:
         "Enhance your outdoor areas with our professional exterior design solutions.",
       icon: "/images/exterior.jpg",
+      list: "- Exterior Design\n- Landscaping\n- Outdoor Furniture Setup",
     },
     {
       title: "General Maintenance",
       description:
         "Keeping your space in peak condition with our comprehensive maintenance services.",
       icon: "/images/furniture.jpg",
+      list: "- General Maintenance\n- Plumbing\n- Electrical Repairs\n- Carpentry\n- boiler repairs and services done by registered gas safe engineer",
     },
   ];
 
@@ -35,7 +38,7 @@ function Services() {
                 className="services"
                 src={s.icon}
                 style={{
-                  height: "200px",
+                  height: "18rem",
                   objectFit: "cover",
                   borderRadius: "0.5rem 0.5rem 0 0",
                 }}
@@ -43,12 +46,13 @@ function Services() {
               <Card.ImgOverlay className="services text-center d-flex flex-column justify-content-center align-items-center">
                 <Card.Title>{s.title}</Card.Title>
                 <Card.Text>{s.description}</Card.Text>
+                <Card.Text>{s.list}</Card.Text>
               </Card.ImgOverlay>
             </Card>
           </Col>
         ))}
       </Row>
-      <Card className="bg-dark text-white text-center my-3 py-3 w-75 mx-auto">
+      <Card className="bg-dark text-white text-center my-3 py-3 mx-auto">
         <h2>Our Commitment to you</h2>
         <hr />
         <div className="p-3">
