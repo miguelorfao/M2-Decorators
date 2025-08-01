@@ -6,7 +6,7 @@ function Services() {
     {
       title: "Interior Design",
       description:
-        "Transform your indoor spaces with our expert interior design services.",
+        "We offer expert interior and exterior painting, wallpaper hanging, plastering, and full decorating services, we ensure a flawless finish every time",
       icon: "/images/interior.jpg",
       list: "- Interior Design\n- Furniture Assembly\n- Painting and Decorating",
     },
@@ -22,7 +22,7 @@ function Services() {
       description:
         "Keeping your space in peak condition with our comprehensive maintenance services.",
       icon: "/images/furniture.jpg",
-      list: "- General Maintenance\n- Plumbing\n- Electrical Repairs\n- Carpentry\n- boiler repairs and services done by registered gas safe engineer",
+      list: "- General Maintenance\n- Plumbing\n- Minor Electrical Repairs\n- Carpentry\n- boiler repairs and services done by registered gas safe engineer",
     },
   ];
 
@@ -55,17 +55,45 @@ function Services() {
       <Card className="bg-dark text-white text-center my-3 py-3 mx-auto">
         <h2>Our Commitment to you</h2>
         <hr />
-        <div className="p-3">
+        <div className="p-3 text-start">
           {" "}
-          <p>
-            We're proud to offer wide range of maintenance services - from basic
-            plumbing to basic electrical and general repairs.
-          </p>
-          <p>
-            But we also know that no one can do everything,. If a job fall
-            outside our scope, we'll connect you with a trusted professional who
-            can get it done.
-          </p>
+          <ul>
+            <li>
+              {" "}
+              <p>
+                We're proud to offer wide range of maintenance services - from
+                basic plumbing to basic electrical and general repairs.
+              </p>
+            </li>
+            <li>
+              {" "}
+              <p>
+                But we also know that no one can do everything,. If a job fall
+                outside our scope, we'll connect you with a trusted professional
+                who can get it done.
+              </p>
+            </li>
+            <li>
+              {" "}
+              <p>
+                We can help with minor electrical jobs such as changing sockets,
+                installing light fixtures, and basic wiring tasks. For all other
+                electrical work, including major installations or repairs, we
+                recommend going with a fully certified contractors to ensure
+                safety and compliance.
+              </p>
+            </li>
+            <li>
+              {" "}
+              <p>
+                We do not handle boiler installations or repairs directly, we
+                work closely with certified heating engineers and contractors to
+                provide you with reliable and safe boiler services. Please
+                contact us and we will arrange for a qualified professional to
+                assist you.
+              </p>
+            </li>
+          </ul>
         </div>
       </Card>
     </Container>

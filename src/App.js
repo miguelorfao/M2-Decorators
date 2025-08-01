@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
       <Services />
       <Gallery />
       <Contact />
+      <Footer />
     </div>
   );
 }

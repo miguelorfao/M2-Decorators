@@ -12,12 +12,7 @@ function Hero() {
       <Container>
         <h1>Elevate Your Space with M2 Decorators</h1>
 
-        <Button
-          variant="light"
-          size="lg"
-          href="#contact"
-          className="hero-button"
-        >
+        <Button variant="light" size="lg" href="#contact" className="button">
           Get a Free Consultation
         </Button>
       </Container>

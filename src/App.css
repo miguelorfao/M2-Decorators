@@ -12,7 +12,10 @@ body {
   color: var(--text-color);
   background-color: var(--primary-color);
 }
-
+h2,
+h3 {
+  color: var(--primary-accent-color);
+}
 .logo {
   font-family: "Cinzel", serif;
   font-size: 28px;
@@ -60,15 +63,14 @@ body {
   height: 100vh;
 }
 
-.hero-section .hero-button {
+.button {
   background-color: var(--primary-accent-color) !important;
   color: var(--primary-color) !important;
   border: none !important;
   font-size: 16px !important;
   cursor: pointer !important;
-  /* transition: 0.3s !important; */
 }
-.hero-section .hero-button:hover {
+.button:hover {
   background-color: transparent !important;
   color: var(--primary-accent-color) !important;
   border: 1px solid var(--primary-accent-color) !important;
