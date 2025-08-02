@@ -1,7 +1,11 @@
 import React from "react";
 
 function Gallery() {
-  const images = ["./images/flooring.jpg"];
+  const images = [
+    "./images/flooring.jpg",
+    "./images/stairs.jpg",
+    "./images/insulation.jpg",
+  ];
   return (
     <div style={{ textAlign: "center", margin: "20px" }}>
       <h2 className="text-center my-4">Gallery</h2>
