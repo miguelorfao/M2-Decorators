@@ -102,43 +102,12 @@ function Services() {
         <hr />
         <div className="p-3 text-start">
           {" "}
-          <ul>
-            <li>
-              {" "}
-              <p>
-                We're proud to offer wide range of maintenance services - from
-                basic plumbing to basic electrical and general repairs.
-              </p>
-            </li>
-            <li>
-              {" "}
-              <p>
-                But we also know that no one can do everything,. If a job fall
-                outside our scope, we'll connect you with a trusted professional
-                who can get it done.
-              </p>
-            </li>
-            <li>
-              {" "}
-              <p>
-                We can help with minor electrical jobs such as changing sockets,
-                installing light fixtures, and basic wiring tasks. For all other
-                electrical work, including major installations or repairs, we
-                recommend going with a fully certified contractors to ensure
-                safety and compliance.
-              </p>
-            </li>
-            <li>
-              {" "}
-              <p>
-                We do not handle boiler installations or repairs directly, we
-                work closely with certified heating engineers and contractors to
-                provide you with reliable and safe boiler services. Please
-                contact us and we will arrange for a qualified professional to
-                assist you.
-              </p>
-            </li>
-          </ul>
+          <p>
+            We're proud to offer wide range of maintenance services - from basic
+            plumbing to basic electrical and general repairs. But we also know
+            that no one can do everything,. If a job fall outside our scope,
+            we'll connect you with a trusted professional who can get it done.
+          </p>{" "}
         </div>
       </Card>
     </Container>
