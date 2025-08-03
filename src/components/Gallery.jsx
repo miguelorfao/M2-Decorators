@@ -18,7 +18,7 @@ function Gallery() {
               {" "}
               <Card style={{ width: "100%" }}>
                 {" "}
-                <img key={i} src={src} />
+                <img key={i} src={src} alt={`image + ${i}`} />
               </Card>
             </Col>
           ))}
