@@ -12,11 +12,11 @@ function Gallery() {
       <h2 className="text-center my-4">Gallery</h2>
 
       <Container>
-        <Row className="d-flex justify-content-center align-items-center">
+        <Row className="d-flex justify-content-center align-items-center gap-2">
           {images.map((src, i) => (
             <Col md={2} lg={3} className="text-center mb-4">
               {" "}
-              <Card style={{ width: "18rem" }}>
+              <Card style={{ width: "100%" }}>
                 {" "}
                 <img key={i} src={src} />
               </Card>
