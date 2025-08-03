@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
+import Review from "./components/Review";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Services />
       <Gallery />
+      <Review />
       <Contact />
       <Footer />
     </div>
