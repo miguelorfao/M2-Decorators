@@ -41,8 +41,7 @@ function Services() {
           </h3>
           <p>
             We offer expert interior and exterior painting, wallpaper hanging,
-            plastering, and full decorating services. From residential homes to
-            commercial properties, we ensure a flawless finish every time.
+            plastering, and full decorating services. From residential home, we ensure a flawless finish every time.
           </p>
         </div>
 
