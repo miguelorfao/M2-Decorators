@@ -97,3 +97,6 @@ h3 {
   z-index: 1050;
   width: 300px;
 }
+.card img {
+  border-radius: 10px !important;
+}

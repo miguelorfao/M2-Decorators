@@ -16,8 +16,10 @@ function Gallery() {
           {images.map((src, i) => (
             <Col md={2} lg={3} className="text-center mb-4">
               {" "}
-              <Card style={{ width: "100%" }}>
-                {" "}
+              <Card
+                style={{ width: "100%" }}
+                className="border-0 rounded-5 card"
+              >
                 <img key={i} src={src} alt={`image + ${i}`} />
               </Card>
             </Col>
