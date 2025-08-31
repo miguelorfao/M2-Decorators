@@ -4,7 +4,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 function Gallery() {
   const images = [
     "./images/flooring.png",
-    "./images/stairs.png",
+    "./images/Stairs.png",
     "./images/insulation.jpg",
   ];
   return (
