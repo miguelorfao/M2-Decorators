@@ -1,5 +1,6 @@
 import React from "react";
 import { useAppContext } from "./Context";
+import { Link } from "react-router-dom";
 function Footer() {
   const { companyEmail, companyNumber } = useAppContext();
   return (
@@ -20,7 +21,8 @@ function Footer() {
             color: "#777",
           }}
         >
-          &copy; 2025 M2 Decorators Ltd. All rights reserved.
+          &copy; 2025 M2 Decorators Ltd. All rights reserved.{" "}
+          <Link to="/review-policy">Review Policy</Link>
         </div>
       </footer>
     </div>

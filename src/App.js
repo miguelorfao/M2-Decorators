@@ -1,25 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import NavigationBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
-import { BrowserRouter } from "react-router-dom";
-import Review from "./components/Review";
+
+import { BrowserRouter, Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import PrivatePolicy from "./components/pages/PrivatePolicy";
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
-      <Hero />
-      <About />
-      <Services />
-      <Gallery />
-      <Review />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/review-policy" element={<PrivatePolicy />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
