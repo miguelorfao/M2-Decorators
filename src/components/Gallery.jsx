@@ -17,10 +17,15 @@ function Gallery() {
             <Col md={2} lg={3} className="text-center mb-4">
               {" "}
               <Card
-                style={{ width: "100%" }}
+                style={{ width: "20rem" }}
                 className="border-0 rounded-5 card"
               >
-                <img key={i} src={src} alt={`image + ${i}`} />
+                <img
+                  key={i}
+                  style={{ height: "20rem" }}
+                  src={src}
+                  alt={`image + ${i}`}
+                />
               </Card>
             </Col>
           ))}
