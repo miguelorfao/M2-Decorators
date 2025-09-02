@@ -13,15 +13,19 @@ function ContactForm() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_122801s", "template_9uj9c3d", form.current, {
-        publicKey: "1fj69a28zmyJcXbb1",
-      })
+      .sendForm(
+        process.env.REACT_APP_SERVICE_KEY,
+        process.env.REACT_APP_TEMPLATE,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           setStatus("Success");
           // Reset the form after successful submission
           e.target.reset();
-          console.log("SUCCESS!");
         },
         (error) => {
           console.log("FAILED...", error.text);
