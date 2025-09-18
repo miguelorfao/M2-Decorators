@@ -5,7 +5,6 @@ import Services from "../Services";
 import About from "../About";
 import Contact from "../Contact";
 import Gallery from "../Gallery";
-import Review from "../Review";
 import Footer from "../Footer";
 
 function Home() {
@@ -16,7 +15,7 @@ function Home() {
       <About />
       <Services />
       <Gallery />
-      <Review />
+
       <Contact />
       <Footer />
     </div>

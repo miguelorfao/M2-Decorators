@@ -22,7 +22,6 @@ function Footer() {
           }}
         >
           &copy; 2025 M2 Decorators Ltd. All rights reserved.{" "}
-          <Link to="/review-policy">Review Policy</Link>
         </div>
       </footer>
     </div>

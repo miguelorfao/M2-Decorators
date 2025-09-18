@@ -46,7 +46,7 @@ function ContactForm() {
   return (
     <>
       {" "}
-      <div className="bg-dark py-3">
+      <div className="bg-dark py-3 mt-5">
         <Container id="contact" className="my-5 py-2">
           {status && (
             <Alert variant="success">
